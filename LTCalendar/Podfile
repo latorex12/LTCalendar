@@ -1,0 +1,8 @@
+#use_frameworks!
+
+target ‘LTCalendar’ do
+
+pod 'Masonry'
+pod 'DateTools'
+
+end

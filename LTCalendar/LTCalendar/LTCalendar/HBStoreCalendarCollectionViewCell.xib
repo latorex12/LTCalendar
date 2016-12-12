@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HBStoreCalendarCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="42"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DVe-DQ-U5p">
+                    <color key="backgroundColor" red="0.26464741479999998" green="0.47843137250000001" blue="0.2456887331" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1ta-MO-xeN"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v2u-1D-Tuk">
+                    <color key="backgroundColor" red="0.0078431372549019607" green="0.76862745098039209" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="v2u-1D-Tuk" secondAttribute="height" multiplier="1:1" id="jhk-OS-XOH"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uEl-f7-bIU">
+                    <color key="backgroundColor" red="0.0" green="0.72549019607843135" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="uEl-f7-bIU" secondAttribute="height" multiplier="1:1" id="SDF-2l-gem"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9S6-fG-725">
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.11372549019607843" green="0.13333333333333333" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="1ta-MO-xeN" secondAttribute="trailing" id="1gG-5V-aiF"/>
+                <constraint firstItem="DVe-DQ-U5p" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="2zA-Ab-w3O"/>
+                <constraint firstAttribute="trailing" secondItem="DVe-DQ-U5p" secondAttribute="trailing" id="Ewt-3Y-k9B"/>
+                <constraint firstItem="v2u-1D-Tuk" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="FrD-Au-jki"/>
+                <constraint firstItem="9S6-fG-725" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Mf7-Du-8B2"/>
+                <constraint firstItem="1ta-MO-xeN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="NXH-D6-cbL"/>
+                <constraint firstItem="uEl-f7-bIU" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="S7Z-v9-Ao3"/>
+                <constraint firstItem="1ta-MO-xeN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="YjL-Fr-zCr"/>
+                <constraint firstItem="DVe-DQ-U5p" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="aV9-kA-hKg"/>
+                <constraint firstItem="9S6-fG-725" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="acE-PY-u5G"/>
+                <constraint firstItem="uEl-f7-bIU" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="210/294" id="bYq-Sh-06c"/>
+                <constraint firstAttribute="bottom" secondItem="9S6-fG-725" secondAttribute="bottom" id="ccI-74-AQI"/>
+                <constraint firstAttribute="bottom" secondItem="1ta-MO-xeN" secondAttribute="bottom" id="ePb-fG-YnW"/>
+                <constraint firstItem="uEl-f7-bIU" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fTi-qi-TnE"/>
+                <constraint firstItem="v2u-1D-Tuk" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="210/294" id="n7N-Yo-y1t"/>
+                <constraint firstItem="v2u-1D-Tuk" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="nr5-sv-cWn"/>
+                <constraint firstItem="DVe-DQ-U5p" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="210/294" id="u6m-8R-yh5"/>
+                <constraint firstAttribute="trailing" secondItem="9S6-fG-725" secondAttribute="trailing" id="uT2-f0-Bbw"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="begin_icon" destination="v2u-1D-Tuk" id="KuQ-OU-uCs"/>
+                <outlet property="end_icon" destination="uEl-f7-bIU" id="Lra-AK-DPr"/>
+                <outlet property="midImageView" destination="1ta-MO-xeN" id="iAQ-yp-BXl"/>
+                <outlet property="mid_icon" destination="DVe-DQ-U5p" id="neD-U2-BrI"/>
+                <outlet property="timeLabel" destination="9S6-fG-725" id="ycW-nO-PFv"/>
+            </connections>
+            <point key="canvasLocation" x="-107" y="-620"/>
+        </view>
+    </objects>
+</document>
