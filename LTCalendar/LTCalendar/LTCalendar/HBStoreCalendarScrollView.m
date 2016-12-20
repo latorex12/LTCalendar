@@ -216,7 +216,9 @@ static NSString *const kCellIdentifier = @"HBStoreCalendarCollectionViewCell";
         }else if (day == totalDays) {
             //每个月最后一天一定是右边缘
             edge = 2;
-        }else if (indexPath.item%7 == 0) {
+        }
+        
+        if (indexPath.item%7 == 0) {
             //周日一定是左边缘
             edge = 1;
         }else if (indexPath.item%7 == 6) {
