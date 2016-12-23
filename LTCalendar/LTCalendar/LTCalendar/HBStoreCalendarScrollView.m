@@ -217,14 +217,14 @@ static NSString *const kCellIdentifier = @"HBStoreCalendarCollectionViewCell";
             //每个月最后一天一定是右边缘
             edge = 2;
         }
-        
         if (indexPath.item%7 == 0) {
             //周日一定是左边缘
-            edge = 1;
+            edge = edge == 2 ? 3:1;
         }else if (indexPath.item%7 == 6) {
             //周六一定是右边缘
-            edge = 2;
+            edge = edge == 1 ? 3:2;
         }
+        
         //如果在可选范围之外则state=6
         if ([cellDate isEarlierThan:self.active_date] || [cellDate isLaterThan:self.current_date]) {
             [cell setupViewsWithText:text state:6 edge:edge index:-1 total:0];

@@ -75,92 +75,88 @@
         self.timeLabel.text = text;
     }
     self.timeLabel.textColor = state ? [UIColor whiteColor]:RGBColor(29, 34, 38);
-        switch (state) {
-            case 0:
-                self.timeLabel.hidden = NO;
-                self.begin_icon.hidden = YES;
-                self.end_icon.hidden = YES;
-                self.mid_icon.hidden = YES;
-                self.midImageView.image = nil;
-                self.timeLabel.textColor = RGBColor(29, 34, 38);
-                self.userInteractionEnabled = YES;
-                break;
-            case 1:
-                self.timeLabel.hidden = NO;
-                self.begin_icon.hidden = NO;
-                self.end_icon.hidden = YES;
-                self.mid_icon.hidden = NO;
-                self.midImageView.image = [UIImage imageNamed:edge == 2 ?  @"store-statistic-oval-right-3":@"store-statistic-oval-left"];
-                self.timeLabel.textColor = [UIColor whiteColor];
-                self.userInteractionEnabled = YES;
-                break;
-            case 2:
-                self.timeLabel.hidden = NO;
-                self.begin_icon.hidden = YES;
-                self.end_icon.hidden = NO;
-                self.mid_icon.hidden = NO;
-                self.midImageView.image = [UIImage imageNamed:edge == 1 ? @"store-statistic-oval-left-3":@"store-statistic-oval-right"];
-                self.timeLabel.textColor = [UIColor whiteColor];
-                self.userInteractionEnabled = YES;
-                break;
-            case 3:
-                self.timeLabel.hidden = NO;
-                self.begin_icon.hidden = YES;
-                self.end_icon.hidden = YES;
-                self.mid_icon.hidden = NO;
-                self.midImageView.image = [UIImage imageNamed: edge-1 ? @"store-statistic-oval-right2":@"store-statistic-oval-left2"];
-                self.timeLabel.textColor = [UIColor whiteColor];
-                self.userInteractionEnabled = YES;
-                break;
-            case 4:
-                self.timeLabel.hidden = NO;
-                self.begin_icon.hidden = NO;
-                self.end_icon.hidden = YES;
-                self.mid_icon.hidden = YES;
-                self.midImageView.image = nil;
-                self.timeLabel.textColor = [UIColor whiteColor];
-                self.userInteractionEnabled = YES;
-                break;
-            case 5:
-                self.timeLabel.hidden = YES;
-                self.begin_icon.hidden = YES;
-                self.end_icon.hidden = YES;
-                self.mid_icon.hidden = YES;
-                self.midImageView.image = nil;
-                self.userInteractionEnabled = NO;
-                break;
-            case 6:
-                self.timeLabel.hidden = NO;
-                self.begin_icon.hidden = YES;
-                self.end_icon.hidden = YES;
-                self.mid_icon.hidden = YES;
-                self.midImageView.image = nil;
-                self.timeLabel.textColor = RGBColor(179, 189, 194);
-                self.userInteractionEnabled = NO;
-                break;
-            default:
-                break;
-        }
-        switch (edge) {
-            case 0:
-                self.midImageView.hidden = state != 1 && state != 2;
-                break;
-            case 1:
-                self.midImageView.hidden = NO;
-                break;
-            case 2:
-                self.midImageView.hidden = NO;
-                break;
-            default:
-                break;
-        }
-    
-//    //判断起始日期在最后一列/结束日期在第一列的情况
-//    if (state == 1 && edge == 2) {
-//        self.midImageView.image = [UIImage imageNamed:@"store-statistic-oval-right-3"];
-//    } else if (state == 2 && edge == 1){
-//        self.midImageView.image = [UIImage imageNamed:@"store-statistic-oval-left-3"];
-//    }
+    switch (state) {
+        case 0:
+            self.timeLabel.hidden = NO;
+            self.begin_icon.hidden = YES;
+            self.end_icon.hidden = YES;
+            self.mid_icon.hidden = YES;
+            self.midImageView.image = nil;
+            self.timeLabel.textColor = RGBColor(29, 34, 38);
+            self.userInteractionEnabled = YES;
+            break;
+        case 1:
+            self.timeLabel.hidden = NO;
+            self.begin_icon.hidden = NO;
+            self.end_icon.hidden = YES;
+            self.mid_icon.hidden = NO;
+            self.midImageView.image = [UIImage imageNamed:edge & 2 ?  @"store-statistic-oval-right-3":@"store-statistic-oval-left"];
+            self.timeLabel.textColor = [UIColor whiteColor];
+            self.userInteractionEnabled = YES;
+            break;
+        case 2:
+            self.timeLabel.hidden = NO;
+            self.begin_icon.hidden = YES;
+            self.end_icon.hidden = NO;
+            self.mid_icon.hidden = NO;
+            self.midImageView.image = [UIImage imageNamed:edge & 1 ? @"store-statistic-oval-left-3":@"store-statistic-oval-right"];
+            self.timeLabel.textColor = [UIColor whiteColor];
+            self.userInteractionEnabled = YES;
+            break;
+        case 3:
+            self.timeLabel.hidden = NO;
+            self.begin_icon.hidden = YES;
+            self.end_icon.hidden = YES;
+            self.mid_icon.hidden = NO;
+            self.midImageView.image = [UIImage imageNamed: edge == 3 ? @"store-statistic-oval-both":(edge-1 ? @"store-statistic-oval-right2":@"store-statistic-oval-left2")];
+            self.timeLabel.textColor = [UIColor whiteColor];
+            self.userInteractionEnabled = YES;
+            break;
+        case 4:
+            self.timeLabel.hidden = NO;
+            self.begin_icon.hidden = NO;
+            self.end_icon.hidden = YES;
+            self.mid_icon.hidden = YES;
+            self.midImageView.image = nil;
+            self.timeLabel.textColor = [UIColor whiteColor];
+            self.userInteractionEnabled = YES;
+            break;
+        case 5:
+            self.timeLabel.hidden = YES;
+            self.begin_icon.hidden = YES;
+            self.end_icon.hidden = YES;
+            self.mid_icon.hidden = YES;
+            self.midImageView.image = nil;
+            self.userInteractionEnabled = NO;
+            break;
+        case 6:
+            self.timeLabel.hidden = NO;
+            self.begin_icon.hidden = YES;
+            self.end_icon.hidden = YES;
+            self.mid_icon.hidden = YES;
+            self.midImageView.image = nil;
+            self.timeLabel.textColor = RGBColor(179, 189, 194);
+            self.userInteractionEnabled = NO;
+            break;
+        default:
+            break;
+    }
+    switch (edge) {
+        case 0:
+            self.midImageView.hidden = state != 1 && state != 2;
+            break;
+        case 1:
+            self.midImageView.hidden = NO;
+            break;
+        case 2:
+            self.midImageView.hidden = NO;
+            break;
+        case 3:
+            self.midImageView.hidden = NO;
+            break;
+        default:
+            break;
+    }
     
     if (index >= 0) {
         [self setupGradientLayerWithIndex:index total:total];
